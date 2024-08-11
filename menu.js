@@ -14,11 +14,11 @@ module.exports = async (kernel, info) => {
     text: "Install",
     href: "install.js",
   }
-  const update_btn = {
-    icon: "fa-solid fa-bolt",
-    text: "Update",
-    href: "update.js",
-  }
+  // const update_btn = {
+  //   icon: "fa-solid fa-bolt",
+  //   text: "Update",
+  //   href: "update.js",
+  // }
   const reset_btn = {
     icon: "fa-solid fa-delete-left",
     text: "Reset",
@@ -34,9 +34,9 @@ module.exports = async (kernel, info) => {
     } else {
       if (updateRunning) {
         update_btn.default = true
-        menu = [ start_btn, update_btn, reset_btn ];
+        menu = [ start_btn, reset_btn ];
       } else {
-        menu = [ start_btn, update_btn, reset_btn ];
+        menu = [ start_btn, reset_btn ];
       }
     }
   } else {
